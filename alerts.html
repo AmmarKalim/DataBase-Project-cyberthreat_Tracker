@@ -1,0 +1,49 @@
+<!-- alerts.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alerts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="alerts-body">
+  <header class="alerts-header">
+    <h1 class="alerts-title">Cybersecurity Threat Tracker</h1>
+    <nav class="alerts-nav">
+      <a href="index.html">Dashboard</a>
+      <a href="threats.html">Threats</a>
+      <a href="alerts.html">Alerts</a>
+      <a href="logs.html">Logs</a>
+      <a href="users.html">Users</a>
+    </nav>
+  </header>
+  <div class="alerts-container">
+    <h2>Alerts</h2>
+    <form id="addAlertForm">
+      <label for="alertText">Alert Text:</label>
+      <input type="text" id="alertText" name="alertText" required />
+      <button type="submit">Add Alert</button>
+    </form>
+    <ul class="alerts-list" id="alertsList">
+      <li>🚨 Critical Ransomware Alert detected on 2025-05-21</li>
+      <li>⚠️ Suspicious login attempt flagged on 2025-05-20</li>
+    </ul>
+  </div>
+  <script>
+    const addAlertForm = document.getElementById('addAlertForm');
+    const alertsList = document.getElementById('alertsList');
+
+    addAlertForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const alertText = document.getElementById('alertText').value.trim();
+      if (alertText) {
+        const newAlert = document.createElement('li');
+        newAlert.textContent = alertText;
+        alertsList.appendChild(newAlert);
+        addAlertForm.reset();
+      }
+    });
+  </script>
+</body>
+</html>

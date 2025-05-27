@@ -1,0 +1,234 @@
+/* style.css | Cyber Threat Tracker Dark Theme */
+
+/* Global Settings */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
+    background-color: #121212;
+  }
+  a {
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: #00ffff;
+  }
+  
+  /* === Dashboard Page === */
+  .dashboard-body {
+    background: #0d1117;
+    animation: fadeIn 1s ease-in;
+  }
+  .dashboard-header {
+    background: #161b22;
+    padding: 1rem;
+    color: #58a6ff;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+  }
+  .dashboard-nav a {
+    margin: 0 10px;
+    color: #58a6ff;
+  }
+  .dashboard-cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+  }
+  .dashboard-card {
+    background: #1f2937;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.15);
+    transition: transform 0.3s;
+    color: #e0e0e0;
+  }
+  .dashboard-card:hover {
+    transform: scale(1.03);
+  }
+  .dashboard-chart {
+    background: #1f2937;
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  /* === Threats Page === */
+  .threats-body {
+    background: #0a0f1a;
+    animation: slideIn 0.8s ease-in;
+  }
+  .threats-header {
+    background: #1f2937;
+    padding: 1rem;
+    color: #ff4c4c;
+    text-align: center;
+  }
+  .threats-nav a {
+    color: #ff9999;
+  }
+  .threats-container {
+    padding: 2rem;
+  }
+  .threats-search {
+    padding: 0.5rem;
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #1c1c1c;
+    color: #fff;
+  }
+  .threats-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e1e2f;
+  }
+  .threats-table th, .threats-table td {
+    border: 1px solid #333;
+    padding: 0.75rem;
+    color: #f8f8f8;
+  }
+  .threats-table th {
+    background: #311111;
+  }
+  
+  /* === Alerts Page === */
+  .alerts-body {
+    background: #0e141b;
+    animation: fadeIn 0.8s ease-in;
+  }
+  .alerts-header {
+    background: #1c1c1c;
+    padding: 1rem;
+    color: #f97316;
+    text-align: center;
+  }
+  .alerts-nav a {
+    color: #fb923c;
+  }
+  .alerts-container {
+    padding: 2rem;
+  }
+  .alerts-item {
+    background: #262626;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-left: 5px solid #f59e0b;
+    animation: slideIn 0.6s ease;
+  }
+  
+  /* === Logs Page === */
+  .logs-body {
+    background: #0d0d0d;
+    animation: fadeIn 1s ease;
+  }
+  .logs-header {
+    background: #1e1e1e;
+    padding: 1rem;
+    color: #10b981;
+    text-align: center;
+  }
+  .logs-nav a {
+    color: #34d399;
+  }
+  .logs-container {
+    padding: 2rem;
+  }
+  .logs-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1a1a;
+  }
+  .logs-table th, .logs-table td {
+    border: 1px solid #2d2d2d;
+    padding: 0.75rem;
+    color: #c9fdd7;
+  }
+  .logs-table th {
+    background: #064e3b;
+  }
+  
+  /* === Users Page (Table Style) === */
+  .users-body {
+    background: #0f0f1f;
+    animation: fadeIn 1s ease;
+  }
+  .users-header {
+    background: #2e1065;
+    padding: 1rem;
+    color: #c084fc;
+    text-align: center;
+  }
+  .users-nav a {
+    color: #d8b4fe;
+  }
+  .users-container {
+    padding: 2rem;
+  }
+  .users-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1a2e;
+  }
+  .users-table th, .users-table td {
+    border: 1px solid #333;
+    padding: 0.75rem;
+    color: #f3e8ff;
+    text-align: left;
+  }
+  .users-table th {
+    background-color: #3c096c;
+    color: #e0b3ff;
+  }
+  .users-table tr:hover {
+    background-color: #301934;
+    transition: background-color 0.3s;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  /* New styles for added forms and buttons */
+  form {
+    margin-bottom: 1rem;
+  }
+  input[type="text"] {
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #eee;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 5px #00ffff;
+  }
+  button {
+    background-color: #00ffff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.4rem 0.8rem;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #00cccc;
+  }
+  label {
+    margin-right: 0.3rem;
+    font-weight: 600;
+  }
+  

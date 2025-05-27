@@ -1,0 +1,52 @@
+<!-- logs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="logs-body">
+  <header class="logs-header">
+    <h1 class="logs-title">Cybersecurity Threat Tracker</h1>
+    <nav class="logs-nav">
+      <a href="index.html">Dashboard</a>
+      <a href="threats.html">Threats</a>
+      <a href="alerts.html">Alerts</a>
+      <a href="logs.html">Logs</a>
+      <a href="users.html">Users</a>
+    </nav>
+  </header>
+  <div class="logs-container">
+    <h2>User Logs</h2>
+    <table class="logs-table">
+      <thead>
+        <tr>
+          <th>User</th>
+          <th>Role</th>
+          <th>Action</th>
+          <th>Timestamp</th>
+        </tr>
+      </thead>
+      <tbody id="logsTableBody">
+        <tr><td>admin</td><td>Administrator</td><td>Logged in</td><td>2025-05-22 08:00</td></tr>
+        <tr><td>analyst</td><td>Security Analyst</td><td>Viewed threat list</td><td>2025-05-22 08:15</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    // Example to dynamically add logs with user role
+    const logsTableBody = document.getElementById('logsTableBody');
+
+    // Function to add a log entry
+    function addLog(user, role, action, timestamp) {
+      const newRow = document.createElement('tr');
+      newRow.innerHTML = `<td>${user}</td><td>${role}</td><td>${action}</td><td>${timestamp}</td>`;
+      logsTableBody.appendChild(newRow);
+    }
+
+    // Example usage: addLog('newuser', 'New Role', 'Performed action', '2025-05-22 09:00');
+  </script>
+</body>
+</html>
