@@ -28,7 +28,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/cyberthreat-tracker.git
+https://github.com/AmmarKalim/DataBase-Project-cyberthreat_Tracker
 ```
 
 ### 2. Import the Database
